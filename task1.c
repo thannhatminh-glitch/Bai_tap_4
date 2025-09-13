@@ -46,11 +46,12 @@ void delay_ms(unsigned int time)
 int main(void)
 {
 	gpio_config();
-  timer_Init();
+ 	timer_Init();
 	while(1)
 	{
 		GPIOC->ODR^=GPIO_Pin_13;
 		delay_ms(1000);
 	}
 }
+
 
